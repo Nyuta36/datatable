@@ -98,7 +98,7 @@ request.onload = function () {
     let content = request.response;
     
     dataTable(content);
-
+    // сортировка по алфавиту
     btnName.onclick = function() {
         tableContent.textContent='';
         sortUsers(content, 'name');
@@ -110,7 +110,7 @@ request.onload = function () {
         dataTable(content);
     };
 
-
+    // фильтр по имени 
     filterUser.addEventListener('keyup',function() {
         let value = filterUser.value;
         let data = searchTable(value, content)
